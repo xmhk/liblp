@@ -3,11 +3,9 @@ from .auxiliary import pyfindpeaks
 from scipy.special import jv,kn
 
 def jkdiff(m,u,w):
-    """Calculate the absolute difference
+    """Calculate the absolute difference diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|.
 
-    diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|
-
-    to determine the branches of LP modes in a step-index fiber.
+    Can be used to determine the branches of LP modes in a step-index fiber.
 
     Arguments:
 
@@ -30,14 +28,17 @@ def calc_jkdiff_matrix(m, V, pts=300):
         [0..V] x [0..V] with pts x pts values.
 
     Arguments:
+
         - m: azimuthal number of periods (m=0,1,2,3...)
         - V:  V-number, normalized frequency
 
     Optional Arguments:
+
         - pts: number of grid points for each of the two
                axes of the matrix
 
     Returns:
+
         - jkdiffmatrix
         - uv : u vector (=w vector)
     """
@@ -50,14 +51,19 @@ def calc_jkdiff_matrix(m, V, pts=300):
     return diff, uv
 
 def get_intersects(m, V, anglepts=500, peakfindpts=5, maxjkdiff=1e-2):
-    """ calculate the intersects  of a circle of given V-number with the branches of LPmp, for given m
+    """Calculate the intersects of the V-circle with the branches of LPmp for given m
 
-    can be used to determine pairs of u,w for the modes of a given V,m
+    Arguments:
 
-    Args:
-    - m azimuthal number of periods (m=0,1,2,3...)
-    - V  V-number, normalized frequency
-    - [optional] anglepts=500, peakfindpts=20   parameters to determine whether an intersect is 'real'
+        - m azimuthal number of periods (m=0,1,2,3...)
+        - V  V-number, normalized frequency
+
+    Optional arguments:
+        - anglepts: number of points for the circle (default=500)
+        - peakfindpts: the !!!!!!!!!
+           !!!!!!!!!!!!!
+           !!!!!!!!!!!!
+           !!!!!!!parameters to determine whether an intersect is 'real'
     """
     epsi = 1e-5
 
