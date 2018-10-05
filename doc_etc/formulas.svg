@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="136.14mm"
-   height="22.986mm"
-   viewBox="0 0 136.14 22.986001"
+   width="87.740997mm"
+   height="13.584001mm"
+   viewBox="0 0 87.740997 13.584001"
    version="1.1"
    id="svg2245"
    inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="formulas.svg"
-   inkscape:export-filename="/home/ch/for_jk.png"
-   inkscape:export-xdpi="149.66548"
-   inkscape:export-ydpi="149.66548">
+   inkscape:export-filename="/home/ch/archiv/PycharmProjects/liblp/doc_etc/for_uw.png"
+   inkscape:export-xdpi="75.141388"
+   inkscape:export-ydpi="75.141388">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="196.72018"
-     inkscape:cy="235.079"
+     inkscape:cx="-499.10722"
+     inkscape:cy="-382.08818"
      inkscape:document-units="mm"
      inkscape:current-layer="layer7"
      showgrid="false"
@@ -60,13 +60,13 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      style="display:none"
-     transform="translate(-92.147619,-182.71791)" />
+     transform="translate(-87.263857,-31.85157)" />
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="jk"
-     style="display:inline"
-     transform="translate(-92.147619,-182.71791)">
+     style="display:none"
+     transform="translate(-87.263857,-31.85157)">
     <g
        transform="translate(6.0476191,96.761906)"
        id="g3281">
@@ -207,7 +207,7 @@
      id="layer8"
      inkscape:label="v"
      style="display:none"
-     transform="translate(-92.147619,-182.71791)">
+     transform="translate(-87.263857,-31.85157)">
     <g
        id="g2957">
       <g
@@ -334,8 +334,8 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="uw"
-     transform="translate(-92.147619,-182.71791)"
-     style="display:none">
+     transform="translate(-87.263857,-31.85157)"
+     style="display:inline">
     <g
        id="g3465"
        transform="translate(2.2678571,-56.69643)">
