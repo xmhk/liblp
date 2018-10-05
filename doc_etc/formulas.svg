@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="87.740997mm"
-   height="13.584001mm"
-   viewBox="0 0 87.740997 13.584001"
+   width="193.164mm"
+   height="20.277mm"
+   viewBox="0 0 193.164 20.277001"
    version="1.1"
    id="svg2245"
    inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="formulas.svg"
-   inkscape:export-filename="/home/ch/archiv/PycharmProjects/liblp/doc_etc/for_uw.png"
+   inkscape:export-filename="/home/ch/archiv/PycharmProjects/liblp/doc_etc/for_v.png"
    inkscape:export-xdpi="75.141388"
    inkscape:export-ydpi="75.141388">
   <sodipodi:namedview
@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-499.10722"
-     inkscape:cy="-382.08818"
+     inkscape:cx="12.299861"
+     inkscape:cy="-146.70136"
      inkscape:document-units="mm"
      inkscape:current-layer="layer7"
      showgrid="false"
@@ -60,13 +60,13 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      style="display:none"
-     transform="translate(-87.263857,-31.85157)" />
+     transform="translate(-84.996,-87.438)" />
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="jk"
      style="display:none"
-     transform="translate(-87.263857,-31.85157)">
+     transform="translate(-84.996,-87.438)">
     <g
        transform="translate(6.0476191,96.761906)"
        id="g3281">
@@ -206,8 +206,8 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="v"
-     style="display:none"
-     transform="translate(-87.263857,-31.85157)">
+     style="display:inline"
+     transform="translate(-84.996,-87.438)">
     <g
        id="g2957">
       <g
@@ -334,8 +334,8 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="uw"
-     transform="translate(-87.263857,-31.85157)"
-     style="display:inline">
+     transform="translate(-84.996,-87.438)"
+     style="display:none">
     <g
        id="g3465"
        transform="translate(2.2678571,-56.69643)">
