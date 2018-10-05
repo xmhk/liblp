@@ -13,11 +13,11 @@ $V=k_0 a {\rm NA} = \frac{2\pi}{\lambda_0} a \sqrt{n_{\rm co}^2-n_{\rm cl}^2}$
 where $\lambda_0$ is the wavelength, a the core radius and n_co and n_cl are the refractive indeces of the core and the cladding, respectively.
 
 Valid fiber modes that can be guided are determined by solutions of the equation
-
+![jk relation](doc_etc/for_jk.png)
 $\frac{J_m(u)}{uJ_{m+1}(u)} = \frac{K_m(w)}{wK_{m+1}(w)}$
 
 where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionless, positive numbers fulfilling the condition.
-
+![uw relation](doc_etc/for_uw.png)
 $V^2 = u^2 + w^2$
 ## besselmode(m, u, w, x, y, phioff)
 
