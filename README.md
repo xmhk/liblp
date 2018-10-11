@@ -25,7 +25,7 @@ where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionle
 
 The branches of the first view modes in the u-v-Plane are shown in the picture below.
 <img src="doc_etc/u_w_plane.png" 
-alt="first few branches" width="600"/>
+alt="first few branches" width="450"/>
 
 
 # using the toolkit
@@ -75,7 +75,7 @@ m=5, # of intersections: 0
 ```
 ## 2. calculate the field of some modes
 
-To calculate the field, we are using the parameter from above,   V=4.5.
+We are using the parameter from above, V=4.5.
 The fields of the modes can be calculated using the function **besselmode** 
 ```
 from liblp import besselmode
