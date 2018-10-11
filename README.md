@@ -209,16 +209,16 @@ Returns:
 ```
 
 
-### 5. calc\_jkdiff\_matrix(m, V, pts=300)
+### 5. calc\_jkdiff\_matrix(m, Vmax, pts=300)
 ```
 calculate the Difference
-diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|
-for a given m for a matrix
-[0..V] x [0..V] with pts x pts values.
+    diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|
+    for a given m for a matrix
+    [0..Vmax] x [0..Vmax] with pts x pts values.
 
 Arguments:
     - m: azimuthal number of periods (m=0,1,2,3...)
-    - V:  V-number, normalized frequency
+    - Vmax:  maximum V-number, normalized frequency
 
 Optional Arguments:
     - pts: number of grid points for each of the two

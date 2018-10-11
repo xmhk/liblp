@@ -21,16 +21,16 @@ def jkdiff(m,u,w):
     return np.abs(  jv(m, u)/(u * jv(m+1,u)) - (kn(m,w)/(w*kn(m+1,w))))
 
 
-def calc_jkdiff_matrix(m, V, pts=300):
+def calc_jkdiff_matrix(m, Vmax, pts=300):
     """ calculate the Difference
         diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|
         for a given m for a matrix
-        [0..V] x [0..V] with pts x pts values.
+        [0..Vmax] x [0..Vmax] with pts x pts values.
 
     Arguments:
 
         - m: azimuthal number of periods (m=0,1,2,3...)
-        - V:  V-number, normalized frequency
+        - Vmax:  maximum V-number, normalized frequency
 
     Optional Arguments:
 
@@ -42,7 +42,7 @@ def calc_jkdiff_matrix(m, V, pts=300):
         - jkdiffmatrix
         - uv : u vector (=w vector)
     """
-    uv = np.linspace(0, V, pts)
+    uv = np.linspace(0, Vmax, pts)
     uu, ww = np.meshgrid(uv, uv)
     uu2 = np.reshape(uu, pts * pts)
     ww2 = np.reshape(ww, pts * pts)
@@ -56,7 +56,7 @@ def get_intersects(m, V, anglepts=500, peakfindpts=5, maxjkdiff=1e-2):
     Arguments:
 
         - m azimuthal number of periods (m=0,1,2,3...)
-        - V  V-number, normalized frequency
+        - V  maximum V-number, normalized frequency
 
     Optional arguments:
         - anglepts: number of points for the circle (default=500)
@@ -78,10 +78,10 @@ def get_intersects(m, V, anglepts=500, peakfindpts=5, maxjkdiff=1e-2):
     angle = np.linspace(np.pi/2.0-epsi, epsi, anglepts)
     w = np.sin(angle) * V
     u = np.cos(angle) * V
-    pl = pyfindpeaks(peakfindpts, 1./jkdiff( m , u, w), 1./maxjkdiff)
+    pl = pyfindpeaks(peakfindpts, 1./jkdiff(m, u, w), 1./maxjkdiff)
     res = []
     for ii,p in enumerate(pl):
-        res.append( [u[p], w[p],"LP%d%d"%(m,ii+1)])
+        res.append([u[p], w[p],"LP%d%d"%(m,ii+1)])
     return res
 
 
