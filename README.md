@@ -17,11 +17,15 @@ where \lambda_0 is the wavelength, a the core radius and n_co and n_cl are the r
 
 Valid (guided) fiber modes that can be determined by solving the differential equation 
 
-<img src="doc_etc/for_jk.png" alt="relation for bessel functions" width="400"/>
+<img src="doc_etc/for_jk.png" alt="relation for bessel functions" width="320"/>
 
 where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionless, positive numbers fulfilling the condition
 
-<img src="doc_etc/for_uw.png" alt="v-uw" width="200"/>
+<img src="doc_etc/for_u_w_plane.png" alt="v-uw" width="290"/>
+
+The branches of the first view modes in the u-v-Plane are shown in the picture below.
+<img src="doc_etc/for_uw.png" alt="v-uw" width="290"/>
+
 
 ## besselmode(m, u, w, x, y, phioff)
 
