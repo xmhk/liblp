@@ -24,22 +24,30 @@ where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionle
 <img src="doc_etc/for_uw.png" alt="v-uw" width="290"/>
 
 The branches of the first view modes in the u-v-Plane are shown in the picture below.
-<img src="doc_etc/u_w_plane.png" alt="first few branches" width="900"/>
+<img src="doc_etc/u_w_plane.png" 
+alt="first few branches" width="600"/>
 
 
-# using the toolkit - determining which modes are guided
+# using the toolkit
+
+# 1. determining which modes are guided for a given V-number
 
 Using the function **get\_intersects** from liblp, the intersection points of a circle of radius **V** with the mode branches in the u-w-plance can be calculated.
 
 The function looks for branches and returns the intersection coordinates.
 
-Example: for V=6, the modes LP01, LP02, LP11, LP12, LP21, and LP31 are supported.
+Example: for V=4.5, the modes LP01, LP02, LP11 and LP21 are guided.
 
 ```
 from liblp import get_intersects
-V=6
-# looking for intersections with increasing m
-for m in range(5):
+
+# set the V-number
+V=4.5
+
+# look for LP modes up to LP_mmax,x
+mmax = 5  
+
+for m in range(mmax+1):
     intersects = get_intersects(m, V)
     print("\nm=%d, # of intersections: %d\n"%(m, len(intersects)))
     for intersect in intersects:
@@ -50,26 +58,76 @@ gives the output:
 ```
 m=0, # of intersections: 2
 
-  LP01 u=2.054 w=5.637
-  LP02 u=4.630 w=3.816
+  LP01 u=1.958 w=4.052
+  LP02 u=4.266 w=1.434
 
-m=1, # of intersections: 2
+m=1, # of intersections: 1
 
-  LP11 u=3.253 w=5.042
-  LP12 u=5.750 w=1.713
+  LP11 u=3.085 w=3.276
 
 m=2, # of intersections: 1
 
-  LP21 u=4.342 w=4.141
+  LP21 u=4.064 w=1.932
 
-m=3, # of intersections: 1
-
-  LP31 u=5.352 w=2.712
-
+m=3, # of intersections: 0
 m=4, # of intersections: 0
+m=5, # of intersections: 0
 ```
+## 2. calculate the field of some modes
 
+To calculate the field, we are using the parameter from above,   V=4.5.
+The fields of the modes can be calculated using the function **besselmode** 
+```
+from liblp import besselmode
+import numpy as np
+from matplotlib import pyplot as plt # for plotting
 
+# x-and y vector for the modes to be calculated
+x = np.linspace(-2,2,500)   # in units of a
+y = x 
+
+# LP01 mode
+m=0
+u=1.958
+w=4.052
+m01 = besselmode(m, u, w, x, y)
+plt.figure()
+plt.imshow(m01, extent=(min(x), max(x), min(y), max(y)), clim=[-1,1], cmap='bwr')
+plt.colorbar()
+
+# LP02 mode
+m=0
+u=4.266 
+w=1.434
+m02 = besselmode(m, u, w, x, y)
+
+plt.figure()
+plt.imshow(m02, extent=(min(x), max(x), min(y), max(y)), clim=[-1,1], cmap='bwr')
+plt.colorbar()
+
+# LP11 mode
+m=1
+u=3.085
+w=3.276
+
+m11 = besselmode(m, u, w, x, y)
+
+plt.figure()
+plt.imshow(m11, extent=(min(x), max(x), min(y), max(y)), clim=[-1,1], cmap='bwr')
+plt.colorbar()
+
+# LP21 mode
+
+m=2
+u=4.064 
+w=1.932
+
+m21 = besselmode(m, u, w, x, y)
+plt.figure()
+plt.imshow(m21, extent=(min(x), max(x), min(y), max(y)), clim=[-1,1], cmap='bwr')
+plt.colorbar()
+
+```
 ## besselmode(m, u, w, x, y, phioff)
 
         calculate the (unscaled!) field of a bessel mode LP mode
