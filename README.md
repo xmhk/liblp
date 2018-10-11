@@ -24,7 +24,7 @@ where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionle
 <img src="doc_etc/for_uw.png" alt="v-uw" width="290"/>
 
 The branches of the first view modes in the u-v-Plane are shown in the picture below.
-<img src="doc_etc/uw_plane.png" alt="first few branches" width="900"/>
+<img src="doc_etc/u_w_plane.png" alt="first few branches" width="900"/>
 
 
 # using the toolkit - determining which modes are guided
@@ -33,17 +33,19 @@ Using the function **get\_intersects** from liblp, the intersection points of a 
 
 The function looks for branches and returns the intersection coordinates.
 
-Example: for V=6, the modes LP01, LO02, LP11, LP12, LP21, and LP31 are supported.
+Example: for V=6, the modes LP01, LP02, LP11, LP12, LP21, and LP31 are supported.
 
-```from liblp import *
+```
+from liblp import get_intersects
 V=6
+# looking for intersections with increasing m
 for m in range(5):
     intersects = get_intersects(m, V)
     print("\nm=%d, # of intersections: %d\n"%(m, len(intersects)))
     for intersect in intersects:
         print("  %s u=%.3f w=%.3f"%(intersect[2], intersect[0], intersect[1]))
 ```
-resulting output:
+gives the output:
 
 ```
 m=0, # of intersections: 2
