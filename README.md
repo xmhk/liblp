@@ -10,6 +10,9 @@ Such a fiber is characterized by the _normalized frequency_, V (V-number).
 
 $V=k_0 a {\rm NA} = \frac{2\pi}{\lambda_0} a \sqrt{n_{\rm co}^2-n_{\rm cl}^2}$
 ![vnumber](doc_etc/for_v.png)
+
+<img src="doc_etc/for_v.png" alt="v-number" width="200"/>
+
 where $\lambda_0$ is the wavelength, a the core radius and n_co and n_cl are the refractive indeces of the core and the cladding, respectively.
 
 Valid fiber modes that can be guided are determined by solutions of the equation
