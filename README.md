@@ -24,7 +24,7 @@ where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionle
 <img src="doc_etc/u_w_plane.png" alt="v-uw" width="290"/>
 
 The branches of the first view modes in the u-v-Plane are shown in the picture below.
-<img src="doc_etc/for_uw.png" alt="v-uw" width="290"/>
+<img src="doc_etc/for_uw.png" alt="first few branches" width="900"/>
 
 
 ## besselmode(m, u, w, x, y, phioff)
