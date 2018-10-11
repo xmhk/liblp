@@ -9,13 +9,13 @@ def jkdiff(m,u,w):
 
     Arguments:
 
-        * m azimuthal number of periods (m=0,1,2,3...)
-        * u radial phase constant
-        * w radial decay constant
+        - m azimuthal number of periods (m=0,1,2,3...)
+        - u radial phase constant
+        - w radial decay constant
 
     Returns:
 
-        * diff - Difference
+        - diff - Difference
 
     """
     return np.abs(  jv(m, u)/(u * jv(m+1,u)) - (kn(m,w)/(w*kn(m+1,w))))
