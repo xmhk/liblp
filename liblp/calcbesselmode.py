@@ -4,11 +4,14 @@ def besselmode(m, u, w, x, y, phioff=0):
     """Calculate the field of a bessel mode LP mode.
 
     Arguments:
-    - m azimuthal number of periods (m=0,1,2,3...)
-    - u, w  radial phase constant and radial decay constant
-    - x, y transverse coordinates
-    - phioff: offset angle, allows to rotate the mode in
-              the x-y plane
+        - m azimuthal number of periods (m=0,1,2,3...)
+        - u, w  radial phase constant and radial decay constant
+        - x, y transverse coordinates
+        - phioff: offset angle, allows to rotate the mode in
+                  the x-y plane
+
+    Returns:
+        - mode: calculated bessel mode
 
     """
     xx,yy = np.meshgrid(x,y)

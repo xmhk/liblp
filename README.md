@@ -1,6 +1,6 @@
 # liblp.py
 
-rev 1 - 27.04.2015
+rev 2 - 11.10.2018
 
 
 # overview
@@ -145,7 +145,6 @@ alt="intersections for V=4.5, calulated mode fields" width="600"/>
 Calculate the intersects of the V-circle with the branches of LPmp for given m
 
 Arguments:
-
     - m azimuthal number of periods (m=0,1,2,3...)
     - V  V-number, normalized frequency
 
@@ -169,11 +168,14 @@ Returns:
 Calculate the field of a bessel mode LP mode.
 
 Arguments:
-- m azimuthal number of periods (m=0,1,2,3...)
-- u, w  radial phase constant and radial decay constant
-- x, y transverse coordinates
-- phioff: offset angle, allows to rotate the mode in
-          the x-y plane
+    - m azimuthal number of periods (m=0,1,2,3...)
+    - u, w  radial phase constant and radial decay constant
+    - x, y transverse coordinates
+    - phioff: offset angle, allows to rotate the mode in
+              the x-y plane          
+          
+Returns:
+    - mode: calculated bessel mode 
 ```
 
 ## auxiliary functions
@@ -198,14 +200,12 @@ Calculate the absolute difference diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|.
 Can be used to determine the branches of LP modes in a step-index fiber.
 
 Arguments:
-
-    * m azimuthal number of periods (m=0,1,2,3...)
-    * u radial phase constant
-    * w radial decay constant
+    - m azimuthal number of periods (m=0,1,2,3...)
+    - u radial phase constant
+    - w radial decay constant
 
 Returns:
-
-    * diff - Difference
+    - diff - Difference
 ```
 
 
@@ -217,17 +217,14 @@ for a given m for a matrix
 [0..V] x [0..V] with pts x pts values.
 
 Arguments:
-
     - m: azimuthal number of periods (m=0,1,2,3...)
     - V:  V-number, normalized frequency
 
 Optional Arguments:
-
     - pts: number of grid points for each of the two
            axes of the matrix
 
 Returns:
-
     - jkdiffmatrix
     - uv : u vector (=w vector)
 ```
