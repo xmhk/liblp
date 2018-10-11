@@ -7,7 +7,8 @@ def besselmode(m, u, w, x, y, phioff=0):
     - m azimuthal number of periods (m=0,1,2,3...)
     - u, w  radial phase constant and radial decay constant
     - x, y transverse coordinates
-    - phioff: offset angle
+    - phioff: offset angle, allows to rotate the mode in
+              the x-y plane
 
     """
     xx,yy = np.meshgrid(x,y)

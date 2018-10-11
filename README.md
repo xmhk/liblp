@@ -135,38 +135,99 @@ The picture below shows the intersections of a V=4.5 circle with the branches in
 alt="intersections for V=4.5, calulated mode fields" width="600"/>
 
 
-## besselmode(m, u, w, x, y, phioff)
+# function reference:
 
-        calculate the (unscaled!) field of a bessel mode LP mode
-        
-        Args:
-        - m azimuthal number of periods (m=0,1,2,3...)
-        - u, w  radial phase constant and radial decay constant
-        - x, y transverse coordinates
-        - phioff: offset angle
-    
-## get_branches(m, V, pts=300)
-        calculate the branches of LPmp, for given m
-        
-        Args:
-        - m azimuthal number of periods (m=0,1,2,3...)
-        - V  V-number, normalized frequency
-    
-## get\_intersects(m, V, epsilon=0.0001, anglepts=500, peakfindpts=20)
-        calculate the intersects  of a circle of given V-number with the branches of LPmp, for given m
-        
-        can be used to determine pairs of u,w for the modes of a given V,m
-        
-        Args:
-        - m azimuthal number of periods (m=0,1,2,3...)
-        - V  V-number, normalized frequency
-        - [optional]  epsilon=1e-4, anglepts=500, peakfindpts=20   parameters to determine whether an intersect is 'real'
-    
-## jkdiff(m, u, w)
-        calculate the absolute difference between Jm(u)/Jm+1(u)-Km(w)/Km+1(w)
-        useful to determine the branches of LP modes in a step-index fiber
-        
-        Args: 
-        - m azimuthal number of periods (m=0,1,2,3...)
-        - u radial phase constant
-        - w radial decay constant
+## main functions:
+
+### 1. get\_intersects(m, V, [anglepts=500, peakfindpts=5, maxjkdiff=1e-2])
+
+```
+Calculate the intersects of the V-circle with the branches of LPmp for given m
+
+Arguments:
+
+    - m azimuthal number of periods (m=0,1,2,3...)
+    - V  V-number, normalized frequency
+
+Optional arguments:
+    - anglepts: number of points for the circle (default=500)
+    - peakfindpts: intersection points are determined by searching
+                   for peaks of 1/jkdiff along the V-circle.
+                   For an u-w pair to be recognized as peak,
+                   it must be a maximum in a surrounding of
+                   peakfindpts points.
+    - maxjkdiff: sets the maximum value for jkdiff, so that
+                 an intersection is still recognized
+
+Returns:
+    - reslist: list of branch intersections found.
+        consists of sub-lists [u, w, modename]
+```
+
+### 2. besselmode(m, u, w, x, y, [phioff=0])
+```
+Calculate the field of a bessel mode LP mode.
+
+Arguments:
+- m azimuthal number of periods (m=0,1,2,3...)
+- u, w  radial phase constant and radial decay constant
+- x, y transverse coordinates
+- phioff: offset angle, allows to rotate the mode in
+          the x-y plane
+```
+
+## auxiliary functions
+
+### 3. pyfindpeaks( environment, valuelist , thresh)
+```
+Determine peak positions in a list or array of real values.
+
+Arguments:
+  - environment: (INT) a maxima has to be the local maximum in this environment of points
+  - valuelist: list or array of points to find the maxima in
+  - thresh: a maximum has to be larger than this value
+
+Returns:
+  - listindices: positions of the peaks found
+```
+
+### 4. jkdiff(m,u,w)
+```
+Calculate the absolute difference diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|.
+
+Can be used to determine the branches of LP modes in a step-index fiber.
+
+Arguments:
+
+    * m azimuthal number of periods (m=0,1,2,3...)
+    * u radial phase constant
+    * w radial decay constant
+
+Returns:
+
+    * diff - Difference
+```
+
+
+### 5. calc\_jkdiff\_matrix(m, V, pts=300)
+```
+calculate the Difference
+diff = |Jm(u)/Jm+1(u)-Km(w)/Km+1(w)|
+for a given m for a matrix
+[0..V] x [0..V] with pts x pts values.
+
+Arguments:
+
+    - m: azimuthal number of periods (m=0,1,2,3...)
+    - V:  V-number, normalized frequency
+
+Optional Arguments:
+
+    - pts: number of grid points for each of the two
+           axes of the matrix
+
+Returns:
+
+    - jkdiffmatrix
+    - uv : u vector (=w vector)
+```

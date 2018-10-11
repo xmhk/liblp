@@ -60,10 +60,18 @@ def get_intersects(m, V, anglepts=500, peakfindpts=5, maxjkdiff=1e-2):
 
     Optional arguments:
         - anglepts: number of points for the circle (default=500)
-        - peakfindpts: the !!!!!!!!!
-           !!!!!!!!!!!!!
-           !!!!!!!!!!!!
-           !!!!!!!parameters to determine whether an intersect is 'real'
+        - peakfindpts: intersection points are determined by searching
+                       for peaks of 1/jkdiff along the V-circle.
+                       For an u-w pair to be recognized as peak,
+                       it must be a maximum in a surrounding of
+                       peakfindpts points.
+        - maxjkdiff: sets the maximum value for jkdiff, so that
+                     an intersection is still recognized
+
+    Returns:
+        - reslist: list of branch intersections found.
+            consists of sub-lists [u, w, modename]
+
     """
     epsi = 1e-5
 
