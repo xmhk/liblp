@@ -128,6 +128,12 @@ plt.imshow(m21, extent=(min(x), max(x), min(y), max(y)), clim=[-1,1], cmap='bwr'
 plt.colorbar()
 
 ```
+
+
+<img src="doc_etc/u_w_planeV45.png" 
+alt="intersections for V=4.5, calulated mode fields" width="600"/>
+
+
 ## besselmode(m, u, w, x, y, phioff)
 
         calculate the (unscaled!) field of a bessel mode LP mode
