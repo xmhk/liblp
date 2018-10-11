@@ -129,6 +129,7 @@ plt.colorbar()
 
 ```
 
+The picture below shows the intersections of a V=4.5 circle with the branches in the u-v plane, as well as the mode fields of the four guided modes.
 
 <img src="doc_etc/u_w_planeV45.png" 
 alt="intersections for V=4.5, calulated mode fields" width="600"/>

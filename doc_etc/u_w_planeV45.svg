@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="u_w_planeV45.svg">
+   sodipodi:docname="u_w_planeV45.svg"
+   inkscape:export-filename="/home/ch/archiv/PycharmProjects/liblp/doc_etc/u_w_planeV45.png"
+   inkscape:export-xdpi="599"
+   inkscape:export-ydpi="599">
   <defs
      id="defs2">
     <marker
@@ -209,9 +212,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="120.60629"
-     inkscape:cy="371.25223"
+     inkscape:zoom="0.7"
+     inkscape:cx="192.32809"
+     inkscape:cy="330.29037"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -232,7 +235,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
