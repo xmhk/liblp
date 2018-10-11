@@ -1,0 +1,5 @@
+$V=k_0 a {\rm NA} = \frac{2\pi}{\lambda_0} a \sqrt{n_{\rm co}^2-n_{\rm cl}^2}$
+
+$\frac{J_m(u)}{uJ_{m+1}(u)} = \frac{K_m(w)}{wK_{m+1}(w)}$
+
+$V^2 = u^2 + w^2$

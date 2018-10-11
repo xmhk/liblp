@@ -8,22 +8,23 @@ rev 1 - 27.04.2015
 This small toolkit allows to calculate the transverse fiber modes guided in a simple step-index fiber.
 Such a fiber is characterized by the _normalized frequency_, V (V-number).
 
-$V=k_0 a {\rm NA} = \frac{2\pi}{\lambda_0} a \sqrt{n_{\rm co}^2-n_{\rm cl}^2}$
-![vnumber](doc_etc/for_v.png)
+
+
 
 <img src="doc_etc/for_v.png" alt="v-number" width="400"/>
 
 where $\lambda_0$ is the wavelength, a the core radius and n_co and n_cl are the refractive indeces of the core and the cladding, respectively.
 
 Valid fiber modes that can be guided are determined by solutions of the equation
-![jk relation](doc_etc/for_jk.png)
+
 <img src="doc_etc/for_jk.png" alt="relation for bessel functions" width="400"/>
-$\frac{J_m(u)}{uJ_{m+1}(u)} = \frac{K_m(w)}{wK_{m+1}(w)}$
+
 
 where J_i and K_i are the _i_ - th Bessel functions, and _u_ and _w_ dimensionless, positive numbers fulfilling the condition.
 ![uw relation](doc_etc/for_uw.png)
-$V^2 = u^2 + w^2$
-<img src="doc_etc/for_v.png" alt="v-uw" width="400"/>
+
+<img src="doc_etc/for_uw.png" alt="v-uw" width="200"/>
+
 ## besselmode(m, u, w, x, y, phioff)
 
         calculate the (unscaled!) field of a bessel mode LP mode
